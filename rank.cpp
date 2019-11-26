@@ -19,27 +19,34 @@ int main()
             char testpass[100];
             std::cout << "Enter Password: ";
             std::cin >> testpass;
-            int rating = PWRating(testpass);
-            std::cout << std::endl << "Password Rating: " << rating << std::endl;
 
-            switch(rating)
+            switch(PWRating(testpass))
             {
                 case 5: 
                     best += 1;
+                    std::cout << std::endl << "Password Rating: " << "Best(5)" << std::endl;
                     continue;
                 case 4:
                     good += 1;
+                    std::cout << std::endl << "Password Rating: " << "Good(4)" << std::endl;
                     continue;
                 case 3:
                     weak += 1;
+                    std::cout << std::endl << "Password Rating: " << "Weak(3)" << std::endl;
                     continue;
                 case 2: 
                     poor += 1;
+                    std::cout << std::endl << "Password Rating: " << "Poor(2)" << std::endl;
                     continue;
                 case 1:
                     unaccept += 1;
+                    std::cout << std::endl << "Password Rating: " << "Unacceptable(1)" << std::endl;
                     continue;
             }
+
+            
+
+            
 
         } else if(yes_no == 'N' || yes_no == 'n')
         {
