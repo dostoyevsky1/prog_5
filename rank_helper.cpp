@@ -6,7 +6,7 @@
 int PWRating(char pw[])
 {
 
-    bool len_crit, upper_crit, lower_crit, digit_crit, special_crit;
+    bool len_crit = false, upper_crit = false, lower_crit = false, digit_crit = false, special_crit = false;
     
     if(strlen(pw)>=8)
     {
@@ -26,7 +26,7 @@ int PWRating(char pw[])
         {
             upper_crit = true;
         }
-        else if(isalnum(pw[i])&&!isalpha(pw[i]))
+        else if(isalnum(pw[i]) && isalpha(pw[i])==0)
         {
             digit_crit = true;
         }
@@ -35,13 +35,10 @@ int PWRating(char pw[])
             special_crit = true;
         }
         
-        
+         
            
     }
-    std::cout << len_crit << std::endl << upper_crit << std::endl << lower_crit << std::endl << digit_crit << std::endl << special_crit << std::endl;
+
     return len_crit+upper_crit+lower_crit+digit_crit+special_crit;
-
-    
-
 
 }

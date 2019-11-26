@@ -6,7 +6,7 @@
 int main()
 {
 
-char str1[] = "Parisvy";
+char str1[] = "";
 
 std::cout << std::endl << PWRating(str1) << std::endl;
 
