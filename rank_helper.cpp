@@ -34,9 +34,7 @@ int PWRating(char pw[])
         {
             special_crit = true;
         }
-        
-         
-           
+    
     }
 
     return len_crit+upper_crit+lower_crit+digit_crit+special_crit;
